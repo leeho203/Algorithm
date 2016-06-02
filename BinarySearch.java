@@ -9,7 +9,7 @@ public class BinarySearch {
 		int num;
 		while(sc.hasNext()){
 			num = sc.nextInt();
-			System.out.println("Answer : " + binarySearch(arr, num));
+			System.out.println("Answer : "+binarySearch(arr, num));
 		}
 	}
 	
@@ -21,14 +21,12 @@ public class BinarySearch {
 		while(left<=right){
 			mid = (left + right)/2;
 			
-			if(target==arr[mid]){
-				return mid;
+			if(target<arr[mid]){
+				right = mid - 1;
+			}else if(target>arr[mid]){
+				left = mid + 1;
 			}else{
-				if(target<arr[mid]){
-					right = mid - 1;
-				}else{
-					left = mid + 1;
-				}
+				return mid;
 			}
 		}
 		

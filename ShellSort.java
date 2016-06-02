@@ -16,9 +16,9 @@ public class ShellSort {
 		int i, j, m, insertData;
 		int interval = len;
 		while (interval != 1) {
-			interval = interval / 4 + 1;								//	interval °è¼Ó ÁÙ¾îµé¾î 1ÀÌ µÇ¸é Á¾·á
+			interval = interval / 4 + 1;						//	interval ê³„ì† ì¤„ì–´ë“¤ì–´ 1ì´ ë˜ë©´ ì¢…ë£Œ
 			for (m = 0; m < interval; m++) {
-				for (i = m + interval; i < len; i += interval) {		//	interval °£°İÀ¸·Î »ğÀÔÁ¤·ÄÀ» ¼öÇà
+				for (i = m + interval; i < len; i += interval) {		//	interval ê°„ê²©ìœ¼ë¡œ ì‚½ì…ì •ë ¬ì„ ìˆ˜í–‰
 					insertData = arr[i];
 					for (j = i - interval; j >= 0; j-=interval) {
 						if (arr[j] > insertData) {

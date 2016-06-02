@@ -2,7 +2,7 @@ package com.project.sort;
 
 public class SelectionSort {
 	public static void main(String args[]) {
-		/* 선택정렬 오름차순으로 */
+		
 		int[] arr = new int[] { 15, 11, 37, 9, 35, 47, 20, 27 };
 
 		int indexMin, temp;

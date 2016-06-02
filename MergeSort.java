@@ -5,21 +5,21 @@ import java.util.Arrays;
 public class MergeSort {
 	public static void main(String args[]) {
 		/*
-		 * º´ÇÕÁ¤·Ä(¿À¸§Â÷¼ø) º´ÇÕÁ¤·ÄÀÇ arrA, arrB´Â ¸ÕÀú Á¤·ÄÀÌ µÇ¾î ÀÖ¾î¾ßÇÔ 
-		 * arrC´Â arrA.length + arrB.lengthÀÇ Å©±â¸¦ °¡Áü				
+		 * ë³‘í•©ì •ë ¬(ì˜¤ë¦„ì°¨ìˆœ) ë³‘í•©ì •ë ¬ì˜ arrA, arrBëŠ” ë¨¼ì € ì •ë ¬ì´ ë˜ì–´ ìˆì–´ì•¼í•¨ 
+		 * arrCëŠ” arrA.length + arrB.lengthì˜ í¬ê¸°ë¥¼ ê°€ì§				
 		 * 															*/
-		int[] arrA = new int[] { 0, 1, 2, 3, 4, 5 };		//	º´ÇÕÁ¤·Ä ´ë»ó ¹è¿­A
-		int[] arrB = new int[] { 1, 3, 4, 5, 6, 7 };		//	º´ÇÕÁ¤·Ä ´ë»ó ¹è¿­B
-		int[] arrC = new int[arrA.length + arrB.length]; 	// º´ÇÕÁ¤·ÄÀ» ÇØ¼­ µ¹·ÁÁÙ ¹è¿­
+		int[] arrA = new int[] { 0, 1, 2, 3, 4, 5 };		//	ë³‘í•©ì •ë ¬ ëŒ€ìƒ ë°°ì—´A
+		int[] arrB = new int[] { 1, 3, 4, 5, 6, 7 };		//	ë³‘í•©ì •ë ¬ ëŒ€ìƒ ë°°ì—´B
+		int[] arrC = new int[arrA.length + arrB.length]; 	//	ë³‘í•©ì •ë ¬ì„ í•´ì„œ ëŒë ¤ì¤„ ë°°ì—´
 		mergeSort(arrA, arrB, arrC);
 		System.out.println(Arrays.toString(arrC));
 	}
 
 	public static void mergeSort(int[] arrA, int[] arrB, int[] arrC) {
-		int iA = 0; 										// arrA Æ÷ÀÎÅÍ
-		int iB = 0; 										// arrB Æ÷ÀÎÅÍ
-		int iC = 0; 										// arrC Æ÷ÀÎÅÍ
-		while (iA < arrA.length && iB < arrB.length) {		//	iA³ª iB°¡ ³¡±îÁö °¥ ¶§ Á¾·á
+		int iA = 0; 						//	arrA í¬ì¸í„°
+		int iB = 0; 						//	arrB í¬ì¸í„°
+		int iC = 0; 						//	arrC í¬ì¸í„°
+		while (iA < arrA.length && iB < arrB.length) {		//	iAë‚˜ iBê°€ ëê¹Œì§€ ê°ˆ ë•Œ ì¢…ë£Œ
 			if (arrA[iA] < arrB[iB]) {
 				arrC[iC] = arrA[iA];
 				iA++;
@@ -30,13 +30,13 @@ public class MergeSort {
 			iC++;	
 		}
 		
-		while(iA<arrA.length){								//	arrB´Â ´Ù Ã³¸®µÇ¾ú´Âµ¥ arrA°¡ Ã³¸® ¾ÈµÇ¾úÀ» °æ¿ì
+		while(iA<arrA.length){		//	arrBëŠ” ë‹¤ ì²˜ë¦¬ë˜ì—ˆëŠ”ë° arrAê°€ ì²˜ë¦¬ ì•ˆë˜ì—ˆì„ ê²½ìš°
 			arrC[iC] = arrA[iA];
 			iA++;
 			iC++;
 		}
 		
-		while(iB<arrB.length){								//	arrA´Â ´Ù Ã³¸®µÇ¾ú´Âµ¥ arrB°¡ Ã³¸® ¾ÈµÇ¾úÀ» °æ¿ì
+		while(iB<arrB.length){		//	arrAëŠ” ë‹¤ ì²˜ë¦¬ë˜ì—ˆëŠ”ë° arrBê°€ ì²˜ë¦¬ ì•ˆë˜ì—ˆì„ ê²½ìš°
 			arrC[iC] = arrB[iB];
 			iB++;
 			iC++;

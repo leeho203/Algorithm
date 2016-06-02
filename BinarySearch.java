@@ -9,7 +9,7 @@ public class BinarySearch {
 		int num;
 		while(sc.hasNext()){
 			num = sc.nextInt();
-			System.out.println("Answer : "+binarySearch(arr, num));
+			System.out.println("Answer : " + binarySearch(arr, num));
 		}
 	}
 	

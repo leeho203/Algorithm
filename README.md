@@ -1,1 +1,1 @@
-# Algorithm
+# Sort & Search Algorithm

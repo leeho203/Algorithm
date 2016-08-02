@@ -18,13 +18,11 @@ public class KruskalAlgorithm {
 	}
 
 	// vertex의 루트 vertex를 찾기 위한 메서드
+	// return parent[vertex] = find(parent[vertex]) 를 써서 vertex의 root를 바로 알 수 있도록 함
 	static int find(int vertex) {
-		if (parent[vertex] == vertex) {
+		if (parent[vertex] == vertex) 
 			return vertex;
-		} else {
-			parent[vertex] = find(parent[vertex]);
-			return parent[vertex];
-		}
+		return parent[vertex] = find(parent[vertex]);
 	}
 
 	// v1과 v2의 루트 vertex를 찾고 같은 루트 vertex를 같지 않다면 높이가 낮은 트리를 높이가 높은 트리로 합쳐줌
